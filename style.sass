@@ -38,10 +38,11 @@ body
     
 #links
     display: flex
-    flex-wrap: wrap
+    //flex-wrap: wrap
+    flex-direction: column
     justify-content: center
     align-items: center
-    
+
     a
         text-decoration: none
         margin: 10px
@@ -50,12 +51,5 @@ body
         justify-content: center
         align-items: center
         width: 400px
-        height: 250px
-        position: relative
-        border: 3px solid $red
-
-        h1
-            color: $darkgrey
-            position: absolute
-            bottom: 5px
-            left: 12px
+        padding: 10px
+        color: $darkgrey
