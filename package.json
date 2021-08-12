@@ -1,0 +1,24 @@
+{
+  "name": "links",
+  "version": "1.0.0",
+  "description": "Simple page to display links to social media profiles",
+  "main": "index.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HazardESC/links.git"
+  },
+  "author": "FinOCE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HazardESC/links/issues"
+  },
+  "homepage": "https://github.com/HazardESC/links#readme",
+  "devDependencies": {
+    "@snowpack/plugin-sass": "^1.4.0",
+    "snowpack": "^3.8.6"
+  }
+}
