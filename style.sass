@@ -1,15 +1,16 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap)
 
-$red: #943F42
-$lightgrey: #DADADA
-$darkgrey: #313131
+$accent: #943F42
+$accent-alt: lighten($accent, 10%)
+$primary: #DADADA
+$secondary: #313131
     
 *
     margin: 0
     font-family: 'Roboto Mono'
 
 body
-    background: $darkgrey
+    background: $secondary
     display: flex
     align-items: center
     justify-content: center
@@ -27,14 +28,14 @@ body
         text-align: center
 
         #details
-            margin-bottom: 30px // Make gap between description and links the matching 50px
+            margin-bottom: 30px
 
     #logo
         grid-area: logo
 
         img
             border-radius: 50%
-            border: 3px solid $red
+            border: 3px solid $accent
             width: 150px
     
     #details
@@ -46,22 +47,28 @@ body
         flex-direction: column
 
         h1
-            color: $lightgrey
+            color: $primary
             font-size: 40px
 
         p
-            color: $lightgrey
+            color: $primary
 
             a
-                color: $red
+                color: $accent
                 text-decoration: none
                 font-weight: bold
 
+                &:hover
+                    color: $accent-alt
+
             #email
-                color: $lightgrey
+                color: $primary
                 display: block
                 margin-top: 15px
                 font-size: 0.8em
+
+                &:hover
+                    color: $accent-alt
     
     #links
         grid-area: links
@@ -73,13 +80,18 @@ body
         a
             text-decoration: none
             margin: 10px
-            background: $lightgrey
+            background: $primary
             display: flex
             justify-content: center
             align-items: center
             width: 100%
             padding: 10px
-            color: $darkgrey
+            color: $secondary
+            border-radius: 2px
+
+            &:hover
+                background: $accent
+                color: $primary
 
             i
                 margin-right: 10px
