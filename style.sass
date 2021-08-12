@@ -18,18 +18,29 @@ body
 #page
     display: grid
     grid-template-areas: 'logo details' 'links links'
-    max-width: 100vh
-    padding: 50px 0 50px 0
+    padding: 50px 20px 50px 20px
+    gap: 50px 20px
+
+    @media screen and (max-width: 768px)
+        grid-template-areas: 'logo' 'details' 'links'
+        gap: 20px
+        text-align: center
+
+        #details
+            margin-bottom: 30px // Make gap between description and links the matching 50px
 
     #logo
         grid-area: logo
-        border-radius: 50%
-        border: 3px solid $red
+
+        img
+            border-radius: 50%
+            border: 3px solid $red
+            width: 150px
     
     #details
         grid-area: details
-        max-width: 300px
-        margin-left: 30px
+        max-width: 400px
+        //margin-left: 30px
         display: flex
         justify-content: center
         flex-direction: column
@@ -52,7 +63,6 @@ body
         flex-direction: column
         justify-content: center
         align-items: center
-        margin-top: 50px
 
         a
             text-decoration: none
