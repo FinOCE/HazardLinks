@@ -10,23 +10,33 @@ $darkgrey: #313131
 
 body
     background: $darkgrey
-
-#info
     display: flex
-    justify-content: center
     align-items: center
-    padding: 50px
+    justify-content: center
+    min-height: 100vh
 
-    img
+#page
+    display: grid
+    grid-template-areas: 'logo details' 'links links'
+    max-width: 100vh
+    padding: 50px 0 50px 0
+
+    #logo
+        grid-area: logo
         border-radius: 50%
         border: 3px solid $red
     
     #details
-        max-width: 500px
+        grid-area: details
+        max-width: 300px
         margin-left: 30px
+        display: flex
+        justify-content: center
+        flex-direction: column
 
         h1
             color: white
+            font-size: 40px
 
         p
             color: $lightgrey
@@ -36,20 +46,21 @@ body
                 text-decoration: none
                 font-weight: bold
     
-#links
-    display: flex
-    //flex-wrap: wrap
-    flex-direction: column
-    justify-content: center
-    align-items: center
-
-    a
-        text-decoration: none
-        margin: 10px
-        background: $lightgrey
+    #links
+        grid-area: links
         display: flex
+        flex-direction: column
         justify-content: center
         align-items: center
-        width: 400px
-        padding: 10px
-        color: $darkgrey
+        margin-top: 50px
+
+        a
+            text-decoration: none
+            margin: 10px
+            background: $lightgrey
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 100%
+            padding: 10px
+            color: $darkgrey
